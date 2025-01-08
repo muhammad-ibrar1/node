@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Search Results</title>
+</head>
+<body>
+  <h1>Google Search</h1>
+
+  <!-- Form to submit search query -->
+  <form action="/search" method="get">
+    <input type="text" name="query" placeholder="Search..." required>
+    <button type="submit">Search</button>
+  </form>
+
+  <!-- Display Error if any -->
+  <% if (error) { %>
+    <p style="color: red;"><%= error %></p>
+  <% } %>
+
+  <!-- Display the search results -->
+  <% if (results && results.length > 0) { %>
+    <h2>Search Results</h2>
+    <ul>
+      <% results.forEach(result => { %>
+        <li>
+          <a href="<%= result.link %>" target="_blank"><%= result.title %></a>
+        </li>
+      <% }) %>
+    </ul>
+  <% } else { %>
+    <p>No results found.</p>
+  <% } %>
+</body>
+</html>

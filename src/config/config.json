@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "root",
+    "password": "my-secret-pw",
+    "database": "database_development",
+    "host": "localhost",
+    "port": 3306,
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "my-secret-pw",
+    "database": "mydatabase",
+    "host": "mysql-db",
+    "port": 3306,
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "my-secret-pw",
+    "database": "mydatabase",
+    "host": "mysql-db",
+    "port": 3306,
+    "dialect": "mysql"
+  }
+}
